@@ -3,3 +3,8 @@
     padding-top: 150px;
     padding-bottom: 150px;
 }
+
+.footer{
+    padding: 100px 0 80px;
+    background: linear-gradient(180deg, rgba(205, 252, 81, 0) 0%, #CDFC51 100%);
+}

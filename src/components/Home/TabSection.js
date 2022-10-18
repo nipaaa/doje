@@ -2,7 +2,7 @@ import React from "react";
 
 const TabSection = () => {
   return (
-    <div className="container d-flex justify-content-between my-5">
+    <div className="container d-flex flex-wrap justify-content-between my-5">
       <button type="button" class="btn btn-dark rounded-pill px-3 fw-bold">
         MUSIC
       </button>
