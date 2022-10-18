@@ -1,7 +1,10 @@
 
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Home from './components/Home/Home';
 import Header from './components/Shared/Header';
+import NotFound from './components/Shared/NotFound';
+import LogIn from './components/Shared/LogIn';
 
 function App() {
   return (
@@ -9,7 +12,7 @@ function App() {
       <Header/>
      <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="signIn" element={<SignIn />} />
+        <Route path="logIn" element={<LogIn />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
      
