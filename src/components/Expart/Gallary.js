@@ -41,7 +41,7 @@ const Gallary = () => {
                 gallary.map((pic,index)=>   <div key={index} className="col-lg-2 ">
                 <div class="card border-0 text-bg-dark">
                   <img src={pic.picture} class="card-img" alt="..." />
-                  <div class="card-img-overlay ">
+                  <div style={{marginTop:"200px"}} class="card-img-overlay ">
                     <h5 class="card-title fw-bolder pt-2">{pic.name}</h5>
                     <p class="card-text fw-bolder">{pic.likes}</p>
                   </div>

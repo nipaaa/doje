@@ -76,7 +76,7 @@ const Album = () => {
           <div key={index} className="col-lg-4 col-md-6 col-sm-12 my-3">
             <div class="card text-bg-dark">
               <img src={album.picture} class="card-img" alt="..." />
-              <div class="card-img-overlay ">
+              <div style={{marginTop: "300px"}} class="card-img-overlay ">
                 <button
                   type="button"
                   class="btn btn-sm btn-outline-light rounded-pill me-3"
@@ -96,7 +96,7 @@ const Album = () => {
           </div>
         ))}
       </div>
-      <div className="d-flex flex-lg-row  flex-column justify-content-between gap-3">
+      <div className="d-flex flex-lg-row  flex-column justify-content-between gap-1">
         {albums.slice(3, 8).map((album, index) => (
           <div key={index} className="">
             <div class="card">
@@ -104,17 +104,19 @@ const Album = () => {
               <div class="card-body">
                 <button
                   type="button"
+                  style={{fontSize:"8px"}}
                   class="btn btn-sm btn-outline-dark rounded-pill me-3"
                 >
                   {album.btn1}
                 </button>
                 <button
                   type="button"
+                  style={{fontSize:"8px"}}
                   class="btn btn-sm btn-outline-dark rounded-pill"
                 >
                   {album.btn2}
                 </button>
-                <h5 class="card-title">{album.title}</h5>
+                <h5    style={{fontSize:"14px"}} class="card-title fw-bolder pt-3">{album.title}</h5>
                 <p class="card-text">{album.description}</p>
                
               </div>
