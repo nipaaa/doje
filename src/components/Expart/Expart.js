@@ -58,7 +58,7 @@ const Expart = () => {
               <h5>JAY PARK</h5>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod, Lorem ipsum dolor sit amet, consectetur a, sed do
+                eiusmod, Lorem ipsum dolor sit amet, consectetur a sed do
                 eiusmod, Lorem ipsum dolor
               </p>
             </div>
