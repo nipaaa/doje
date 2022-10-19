@@ -4,6 +4,7 @@ import expart2 from "../../assets/section/expert1.png";
 import Gallary from "./Gallary";
 import arrow from "../../assets/icon/arrow.svg"
 import Footer from "../Shared/Footer";
+import ExpartEaq from "./ExpartEaq";
 
 const Expart = () => {
   const allButton = [
@@ -104,6 +105,7 @@ const Expart = () => {
               Get Feedback <img src={arrow} alt="" />
             </button>
           </div>
+          <ExpartEaq/>
         
         </div>
       </div>
