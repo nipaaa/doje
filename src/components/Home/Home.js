@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Shared/Footer';
 import Album from './Album';
 import Banner from './Banner';
 import Faq from './Faq';
@@ -10,7 +11,11 @@ const Home = () => {
            <Banner/>
            <TabSection/>
            <Album/> 
+           <div className='footer'>
            <Faq/>
+           <Footer/>
+           </div>
+          
         </div>
     );
 };

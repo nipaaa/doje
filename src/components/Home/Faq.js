@@ -18,7 +18,7 @@ const Faq = () => {
     ]
     return (
         <div className='container my-5'>
-             <div class="accordion accordion-flush" id="accordionFlushExample">
+             <div class="accordion accordion-flush bg-transparent" id="accordionFlushExample">
              {
                 faqs.map((faq,index)=> <div key={index} class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">

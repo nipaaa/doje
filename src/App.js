@@ -18,7 +18,6 @@ function App() {
         <Route path="logIn" element={<LogIn />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-     <Footer/>
     </div>
   );
 }

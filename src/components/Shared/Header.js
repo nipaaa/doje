@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import search from "../../assets/icon/search.svg";
+import account from "../../assets/icon/account.svg";
+
 
 const Header = () => {
     return (
@@ -11,21 +14,25 @@ const Header = () => {
           </button>
           <a class="navbar-brand fw-bolder" href="#">Doje</a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <Link to="/" class="nav-link active" >Home</Link>
+                <Link to="/" class="nav-link active fw-bolder" >Home</Link>
               </li>
               <li class="nav-item">
-                <Link to="expart" class="nav-link" href="#">Expart</Link>
+                <Link to="expart" class="nav-link active fw-bolder" href="#">Expart</Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">user</a>
+              <li  class="nav-item">
+                <Link to="/" class="nav-link active fw-bolder" href="#">user</Link>
               </li>
-             
+              <li  class="nav-item">
+                <Link to="/logIn" class="nav-link active fw-bolder" href="#">Log In</Link>
+              </li>
+           
             </ul>
-            <form >
-              <Link to="logIn" class="btn btn-outline-success" type="submit">Log In</Link>
-            </form>
+            <form class="d-flex" role="search">
+    <img className='me-4' src={search} alt="" />
+    <img src={account} alt="" />
+    </form>
           </div>
      
         </div>
