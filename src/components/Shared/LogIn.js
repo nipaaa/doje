@@ -3,7 +3,7 @@ import google from "../../assets/icon/google.svg"
 
 const LogIn = () => {
   return (
-    <div className="footer">
+    <div className="footer login">
       <div className="w-25 mx-auto pb-3">
         <div className="border-bottom border-dark">
         <input className="border-0 bg-transparent py-3 w-100" type="ID" placeholder="ID" />

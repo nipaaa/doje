@@ -76,21 +76,27 @@ const Album = () => {
           <div key={index} className="col-lg-4 col-md-6 col-sm-12 my-3">
             <div class="card text-bg-dark">
               <img src={album.picture} class="card-img" alt="..." />
-              <div style={{marginTop: "300px"}} class="card-img-overlay ">
-                <button
-                  type="button"
-                  class="btn btn-sm btn-outline-light rounded-pill me-3"
-                >
-                  {album.btn1}
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-sm btn-outline-light rounded-pill"
-                >
-                  {album.btn2}
-                </button>
-                <h5 class="card-title fw-bolder pt-2">{album.title}</h5>
-                <p class="card-text fw-bolder">{album.description}</p>
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <div className="d-flex flex-column justify-content-end">
+                  <div></div>
+                  <div></div>
+                  <div>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-light rounded-pill  me-3"
+                    >
+                      {album.btn1}
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                    >
+                      {album.btn2}
+                    </button>
+                    <h5 class="card-title fw-bolder pt-2">{album.title}</h5>
+                    <p class="card-text fw-bolder">{album.description}</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -104,21 +110,25 @@ const Album = () => {
               <div class="card-body">
                 <button
                   type="button"
-                  style={{fontSize:"8px"}}
-                  class="btn btn-sm btn-outline-dark rounded-pill me-3"
+                  style={{ fontSize: "8px" }}
+                  class="btn btn-sm btn-outline-dark rounded-pill fw-bold me-3"
                 >
                   {album.btn1}
                 </button>
                 <button
                   type="button"
-                  style={{fontSize:"8px"}}
-                  class="btn btn-sm btn-outline-dark rounded-pill"
+                  style={{ fontSize: "8px" }}
+                  class="btn btn-sm btn-outline-dark rounded-pill fw-bold"
                 >
                   {album.btn2}
                 </button>
-                <h5    style={{fontSize:"14px"}} class="card-title fw-bolder pt-3">{album.title}</h5>
+                <h5
+                  style={{ fontSize: "14px" }}
+                  class="card-title fw-bolder pt-3"
+                >
+                  {album.title}
+                </h5>
                 <p class="card-text">{album.description}</p>
-               
               </div>
             </div>
           </div>

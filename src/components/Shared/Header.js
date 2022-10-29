@@ -6,8 +6,8 @@ import account from "../../assets/icon/account.svg";
 
 const Header = () => {
     return (
-      <div className='px-3 mb-5'>
-   <nav class="navbar navbar-expand-lg border-bottom border-dark py-4 ">
+      <div className='px-3 mb-4 header'>
+   <nav class="navbar navbar-expand-lg border-bottom border-dark py-1 ">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,12 +29,12 @@ const Header = () => {
               </li>
            
             </ul>
-            <form class="d-flex" role="search">
+            <div class="d-flex flex-column flex-lg-row justify-content-sm-start" role="search">
               <button className='border-0 bg-transparent'>  <img className='me-4' src={search} alt="" /></button>
               <button className='border-0 bg-transparent'>  <img src={account} alt="" /></button>
   
    
-    </form>
+    </div>
           </div>
      
         </div>
