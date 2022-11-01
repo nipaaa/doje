@@ -25,6 +25,9 @@ const Header = () => {
                 <Link to="/" class="nav-link active fw-bolder" href="#">user</Link>
               </li>
               <li  class="nav-item">
+                <Link to="request" class="nav-link active fw-bolder" href="#">Request</Link>
+              </li>
+              <li  class="nav-item">
                 <Link to="/logIn" class="nav-link active fw-bolder" href="#">Log In</Link>
               </li>
            

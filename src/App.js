@@ -6,6 +6,7 @@ import Header from './components/Shared/Header';
 import NotFound from './components/Shared/NotFound';
 import LogIn from './components/Shared/LogIn';
 import Expart from './components/Expart/Expart';
+import Request from './components/RequestProcess/Request';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="expert" element={<Expart />} />
         <Route path="logIn" element={<LogIn />} />
+        <Route path="request" element={<Request />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
