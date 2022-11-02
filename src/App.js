@@ -16,7 +16,14 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="expert" element={<Expart />} />
         <Route path="logIn" element={<LogIn />} />
-        <Route path="request" element={<Request />} />
+        <Route path="request" element={<Request />}>
+            <Route path='link1' />
+            <Route path='link2' />
+            <Route path='link3' />
+            <Route path='link4' />
+            <Route path='link5' />
+            <Route path='link6' />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

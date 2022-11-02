@@ -1,26 +1,37 @@
 import React from "react";
 import { useState } from "react";
+import { NavLink, Outlet } from "react-router-dom";
+import CustomLink from "../../utils/CustomLink";
+
 
 const Request = () => {
-    const [profile, setProfile] = useState("");
-    const imageStorageKey = "cb1a7d020847680d78193b615dbd3aff";
-    const handleProfile = async (e)=>{
-        e.preventDefault();
-        const profileImg = e.target.profileImg.files[0];
-        const formData = new FormData();
-        formData.append("image", profileImg);
-        const url = `https://api.imgbb.com/1/upload?expiration=600&key=${imageStorageKey}`;
-        const request = await fetch(url, {
-          method: "POST",
-          body: formData,
-        });
-        console.log(profile, "before");
-        const response = await request.json();
-        // await updateProfile({ photoURL: response?.data?.url });
-    setProfile(response?.data?.url)
-    console.log(profile,"after");
-     
-    }
+  const [profile, setProfile] = useState("");
+  const [prof, setProf] = useState(false)
+  const [loading, setLoading] = useState(false);
+  const imageStorageKey = "cb1a7d020847680d78193b615dbd3aff";
+  const handleProfile = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const profileImg = e.target.profileImg.files[0];
+    const formData = new FormData();
+    formData.append("image", profileImg);
+    const url = `https://api.imgbb.com/1/upload?expiration=600&key=${imageStorageKey}`;
+    const request = await fetch(url, {
+      method: "POST",
+      body: formData,
+    });
+    console.log(profile, "before");
+    const response = await request.json();
+    console.log(response, "response");
+
+    // await updateProfile({ photoURL: response?.data?.url });
+    await setProfile(response.data.url)
+    await setProf(true);
+    setLoading(false);
+
+
+  }
+  console.log(profile, "after");
   return (
     <div>
       {/* <!-- porcess section start here --> */}
@@ -131,11 +142,22 @@ const Request = () => {
                       {/* <!-- <h1>Beautiful CSS-Only File Inputs</h1>
                                     <p>Create beautifully designed, CSS-only, semantic and accessible file upload buttons with the <code>label</code> element.</p> --> */}
 
-                      <input  accept="image/png, image/jpeg, image/jpg"     name="profileImg" type="file" id="file" />
-                      <label className="text-center" for="file">
-                        {" "}
-                        <p>CHOOSE FILE</p> <br /> <span>upto 2GB</span>{" "}
-                      </label>
+                      {
+                        (prof) ? <>
+                          {(profile === "") ? "" : <img src={profile} />}
+
+                        </> :
+                          <>
+
+                            <input accept="image/png, image/jpeg, image/jpg" name="profileImg" type="file" id="file" />
+                            <label className="text-center" for="file">
+                              {" "}
+                              <p>CHOOSE FILE</p> <br /> <span>upto 2GB</span>{" "}
+                            </label>
+                            {(loading) ? <h1>Loading</h1> : ""}
+                          </>
+
+                      }
 
                       <textarea
                         name="question"
@@ -247,13 +269,15 @@ const Request = () => {
               <div className="second__step">
                 <h4>결제 수단을 선택해주세요.</h4>
                 <div className="payment__way">
-                  <a href="#">Paypal</a>
-                  <a href="#">신용카드</a>
-                  <a href="#">카카오페이</a>
-                  <a href="#">네이버페이</a>
-                  <a href="#">토스</a>
-                  <a href="#">기타결제수단</a>
+                  <CustomLink to="/request/link1">Paypal</CustomLink>
+                  <CustomLink to="/request/link2">신용카드</CustomLink>
+                  <CustomLink to="/request/link3">카카오페이</CustomLink>
+                  <CustomLink to="/request/link4">네이버페이</CustomLink>
+                  <CustomLink to="/request/link5">토스</CustomLink>
+                  <CustomLink to="/request/link6">기타결제수단</CustomLink>
+                      <Outlet />
                 </div>
+
               </div>
               <div className="third__step d-flex justify-content-between align-items-center">
                 <img src="assets/images/icon/tik.png" alt="icon" />{" "}
@@ -262,7 +286,7 @@ const Request = () => {
             </div>
 
             <form className="login__form d-flex justify-content-between align-items-center">
-              <button style={{width:" 27%", backgroundColor: "#000", color: "#fff"}}>
+              <button style={{ width: " 27%", backgroundColor: "#000", color: "#fff" }}>
                 {" "}
                 <img
                   src="assets/images/icon/arrow-left-white.png"
@@ -270,7 +294,7 @@ const Request = () => {
                 />{" "}
               </button>
               <button
-                style={{width: "68%"}}
+                style={{ width: "68%" }}
                 className="signUp_btn d-flex justify-content-between align-items-center ps-3 pe-3 mt-0"
               >
                 Next{" "}
